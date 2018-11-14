@@ -2,5 +2,11 @@
 
 <% @people.each do |person| %>
   <h2><%= person.name %></h2>
-  <%= link_to 'Show Person', person_path(person) %>
+  <%= link_to 'Show Persons Info ', person_path(person) %>
+
+  <p><%= link_to 'Add New Person', new_person_path %></p>
+
+  <p><%= link_to 'Change Current Person', edit_person_path(person) %></p>
+
+  <p><%= link_to 'Annihilate a Person', person, method: :delete %></p>
 <% end %>
